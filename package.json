@@ -1,0 +1,16 @@
+{
+  "name": "jossy-pay-bot",
+  "version": "1.0.0",
+  "description": "Jossy Pay Telegram Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.0.0",
+    "node-telegram-bot-api": "^0.66.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
