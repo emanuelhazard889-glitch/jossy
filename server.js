@@ -398,3 +398,12 @@ server.listen(PORT, '0.0.0.0', () => {
 });
 
 console.log("Bot is running and successfully started...");
+bot.onText(/\/resetall/, async (msg) => {
+    if (msg.chat.id !== ADMIN_ID) return;
+    
+    await User.deleteMany({});
+    await Config.updateOne({ key: "main" }, { totalWithdrawn: 0 });
+    
+    bot.sendMessage(ADMIN_ID, "⚠️ የሁሉንም ተጠቃሚዎች Balance፣ Referral እና Stats ዳታ እንደ አዲስ Reset አድርጌዋለሁ!");
+});
+
